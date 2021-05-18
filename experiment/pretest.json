@@ -1,0 +1,42 @@
+[{
+	"question": "What is Specific Gravity of bitumen?",
+	"answers": {
+		"a": "Ratio of mass of given volume of substance to equal volume of water",
+		"b": "Ratio of mass of given volume of substance to equal volume of mass",
+		"c": "Ratio of mass of given water of substance to equal volume of substance",
+		"d": "Ratio all over mass to water"
+	},
+	"correctAnswer": "a"
+}, {
+	"question": "Specific gravity of bitumen directly conveys the quality of bitumen. (say True of False)",
+	"answers": {
+		"a": "True",
+		"b": "False"
+	},
+	"correctAnswer": "a"
+}, {
+	"question": "Why Specific Gravity test is done?",
+	"answers": {
+		"a": "To know the grade",
+		"b": "To know its quality",
+		"c": "To know about its durability",
+		"d": "To know the toughness"
+	},
+	"correctAnswer": "b"
+}, {
+	"question": "Specific value of bitumen ranges from?",
+	"answers": {
+		"a": "0.98 to 1.20",
+		"b": "2.00 to 2.08",
+		"c": "0.99 to 1.00",
+		"d": "0.62 to 0.63"
+	},
+	"correctAnswer": "a"
+}, {
+	"question": "The presence of mineral impurities decreases the specific gravity of bitumen ( Say True or False)",
+	"answers": {
+		"a": "True",
+		"b": "False"
+	},
+	"correctAnswer": "b"
+}]
