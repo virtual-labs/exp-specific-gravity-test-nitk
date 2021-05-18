@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SOLVE</title>
+<link rel="stylesheet" href="css/specific.css" />
+<script type="text/javascript" src="js/sp.js"></script>
+<link href="css/mathstyle.css" rel="stylesheet" /><!--Stylesheet to display Math functions -->
+<script>
+var simsubscreennum=0;
+var temp=0;
+var data = [[42.52,73.98,64.00,74.30,1.0151],
+			[42.31,74.89,63.90,74.50,0.9822],
+			[42.00,75.00,63.60,74.80,0.9909]];
+//  var box = document.querySelector(".simscreen"); 
+//  document.querySelector(".simscreen").addEventListener("onclick", updateDisplay, false); 
+//  alert(event.pageY); 
+
+//  function updateDisplay(event) {
+//  alert(event.pageX); 
+// } 
+
+// function getLoc(event,ht){
+//  alert(event.pageX);
+// }
+
+</script>
+</head>
+
+<body style="margin:0; font-family:verdana;">
+<div id="simscreen">
+<div id="title"><h3>SPECIFIC GRAVITY TEST ON BITUMEN </h3></div>
+
+<div class="simsubscreen" id="canvas0" >
+<h4 class="incanvas">Objective:</h4>
+<p class="incanvas" style="font-size:14px;">To determine the specific gravity of the given sample of bitumen.</p><br/>
+<h4 class="incanvas">Apparatus used:</h4>
+<p class="incanvas" style="font-size:14px;">Specific Gravity Bottle, Weighing Balance, Distilled Water.</p>
+<img style="position:absolute; left:50px; top:130px;max-width:20%;width:100%;transform: rotateY(180deg)" src="images/man.png" />
+<img style="position:absolute; left:200px; top:260px;" src="images/table.png" />
+<img style="position:absolute; left:240px; top:200px;max-width:12%;width:100%;cursor:pointer" title = "Specific Gravity Bottle"src="images/main.png" />
+<img style="position:absolute; left:350px; top:190px;max-width:32%;width:100%;cursor:pointer" title = "Weighing Balance" src="images/mainMachine.png" />
+<!-- <img style="position:absolute; left:300px; top:200px;cursor:pointer" title = "Weighing Balance" src="images/wm1.png" />
+<img style="position:absolute; left:360px; top:320px;" src="images/on.png" />
+<img style="position:absolute; left:465px; top:320px;" src="images/tare.png" /> -->
+<img style="position:absolute; left:600px; top:190px;max-width:15%;width:100%;cursor:pointer;transform: rotateY(180deg)" title = "Distilled Water" src="images/mainbottle.png" />
+<!-- description div -->
+<br>&nbsp;<span class="tooltip" style="border-bottom:1px dotted ; color:red;text-align:justify">Description
+	<span class="tooltiptext">
+	<strong style="color:red">Specific Gravity of Bitumen</strong>: is defined by BIS as the ratio of the mass of a given volume of the bituminous materials to the mass of an equal volume of water, the temperature of both being specified as 27<sup>o</sup>C.
+	</span>
+	</span>
+
+</div>
+
+<div class="simsubscreen" id="canvas1" style="visibility:hidden;">
+	<strong class="incanvas">STEP</strong>
+	<span class="circlebg">&nbsp;1&nbsp;</span>
+	<p class="steptext">&nbsp;Cleaned and dried Specific Gravity bottle is weighed along with stopper W<sub>1</sub>(g).</p>
+	<span id="can1-5"></span>
+	<img id="can1-1" style="position:absolute; left:200px; top:280px;" src="images/wm1.png" />
+	<img id="can1-2" style="position:absolute; left:260px; top:400px;cursor:pointer" src="images/on.png" />
+	<img id="can1-3" style="position:absolute; left:365px; top:400px;cursor:pointer" src="images/tare.png" />
+	<img id="can1-4" style="position:absolute; left:75px; top:240px;cursor:pointer;visibility:hidden" src="images/main.png" />
+	<img id="can1-6" style="position:absolute; left:0px; top:180px;cursor:pointer;visibility:hidden" src="images/bitbottle.png" />
+	<p id="w1" style="position:absolute; left:100px; top:470px;font-family:verdana;font-size:14px;">Weight of empty Specific Gravity bottle(W<sub>1</sub>) = <span id="w1span">_____</span>g</p>
+</div>
+
+<div class="simsubscreen" id="canvas2" style="visibility:hidden;">
+	<strong class="incanvas">STEP</strong>
+	<span class="circlebg">&nbsp;2&nbsp;</span>
+	<p class="steptext">&nbsp;Specific Gravity bottle is filled with distilled water and is placed in water bath maintained at 27&deg;C.</p>
+	<img id="can2-6" style="position:absolute; left:300px; top:150px;cursor:pointer;width:60%;cursor:pointer;visibility:hidden" src="images/waterbath2.png" />
+	<img id="can2-5" style="position:absolute; left:200px; top:408px;cursor:pointer;visibility:hidden" src="images/fillwater.png" />
+	<img id="can2-1" style="position:absolute; left:200px; top:250px;" src="images/bottle.png" />
+	<img id="can2-1a" style="position:absolute; left:200px; top:250px;visibility:hidden;cursor:pointer" src="images/waterBottle.PNG" />
+	<img id="can2-1b" style="position:absolute;left:130px; top:174px;width:20%;visibility:hidden" src="images/waterhand.png" />
+	<img id="can2-2" style="position:absolute; left:239px; top:232px;cursor:pointer" src="images/bottleCap.png" />
+	<img id="can2-2a" style="position:absolute; left:130px; top:174px;visibility:hidden" src="images/bottleCapHand.png" />
+	<img id="can2-3" style="position:absolute; left:300px; top:220px;cursor:pointer;visibility:hidden" src="images/mainbottle.png" />
+	<img id="can2-3a" style="position:absolute; left:240px; top:220px;cursor:pointer;visibility:hidden" src="images/bittilt.png" />
+	<img id="can2-3b" style="position:absolute; left:300px; top:220px;cursor:pointer;visibility:hidden" src="images/halfBottle.png" />
+</div>
+
+<div class="simsubscreen" id="canvas3" style="visibility:hidden;">
+<strong class="incanvas">STEP</strong>
+<span class="circlebg">&nbsp;3&nbsp;</span>
+<p class="steptext">&nbsp;The Specific Gravity bottle containing distilled water is now weighed W<sub>2</sub>(g).</p>
+	<span class = "light" id="can3-5"></span>
+	<img id="can3-1" style="position:absolute; left:200px; top:280px;" src="images/wm1.png" />
+	<img id="can3-2" style="position:absolute; left:260px; top:400px;cursor:pointer" src="images/on.png" />
+	<img id="can3-3" style="position:absolute; left:365px; top:400px;cursor:pointer" src="images/tare.png" />
+	<img id="can3-4" style="position:absolute; left:75px; top:240px;cursor:pointer;" src="images/waterBottle.PNG" />
+	<img id="can3-6" style="position:absolute; left:0px; top:180px;cursor:pointer;visibility:hidden" src="images/waterhand.png" />
+	<p id="w2" style="position:absolute; left:100px; top:470px;font-family:verdana;font-size:14px;">Weight of empty Specific Gravity bottle + Water(W<sub>2</sub>) = <span id="w2span">_____</span>g</p>
+</div>
+
+<div id="canvas4" class="simsubscreen" style="visibility:hidden;">
+<strong class="incanvas">STEP</strong>
+<span class="circlebg">&nbsp;4&nbsp;</span>
+<p class="steptext">&nbsp;The bituminous material is heated to a pouring temperature.</p>
+	<img id="can4-1" style="position:absolute; left:250px; top:300px;width:25%;cursor:pointer" src="images/bunsenoff.png" />
+	<img id="can4-2" style="position:absolute; left:160px; top:252px;cursor:pointer;visibility:hidden" src="images/sample.png" />
+	<img id="can4-3" style="position:absolute; left:0px; top:250px;cursor:pointer;visibility:hidden" src="images/bitPour.png" />
+	<img id="can4-4" style="position:absolute; left:295px; top:80px;cursor:pointer;visibility:hidden" src="images/thermometer.png" />
+	<img id="can4-6" style="position:absolute; left:476.8px; top:180px;cursor:pointer;visibility:hidden" src="images/moveZoom.png" />
+	<img id="can4-5" style="position:absolute; left:450px; top:80px;cursor:pointer;visibility:hidden" src="images/thermZoom.png" />
+	<img id="can4-12" style="position:absolute; left:220px; top:180px;cursor:pointer;visibility:hidden" src="images/tiltsample.png" />
+	<img id="can4-13" style="position:absolute; left:200px; top:418px;cursor:pointer;visibility:hidden" src="images/moveBit.png" />
+	<img id="can4-7" style="position:absolute; left:200px; top:250px;visibility:hidden" src="images/bottle.png" />
+	<img id="can4-8" style="position:absolute; left:239px; top:232px;cursor:pointer;visibility:hidden" src="images/bottleCap.png" />
+	<img id="can4-9" style="position:absolute; left:300px; top:220px;cursor:pointer;visibility:hidden" src="images/mainbottle.png" />
+	<img id="can4-11" style="position:absolute; left:300px; top:180px;cursor:pointer;visibility:hidden" src="images/bitPour2s.png" />
+</div>
+
+
+<div id="canvas5" class="simsubscreen" style="visibility:hidden;">
+<strong class="incanvas">STEP</strong>
+<span class="circlebg">&nbsp;5&nbsp;</span>
+<p class="steptext">&nbsp;The Specific Gravity bottle containing bitumen is now weighed W<sub>3</sub>(g).</p>
+	<span class = "light" id="can5-5"></span>
+	<img id="can5-1" style="position:absolute; left:200px; top:280px;" src="images/wm1.png" />
+	<img id="can5-2" style="position:absolute; left:260px; top:400px;cursor:pointer" src="images/on.png" />
+	<img id="can5-3" style="position:absolute; left:365px; top:400px;cursor:pointer" src="images/tare.png" />
+	<img id="can5-4" style="position:absolute; left:75px; top:240px;cursor:pointer;" src="images/halfBitBottle.png" />
+	<img id="can5-4a" style="position:absolute; left:0px; top:180px;cursor:pointer;visibility:hidden" src="images/halfBitHand.png" />
+	<img id="can5-4b" style="position:absolute; left:275px; top:110px;cursor:pointer;visibility:hidden" src="images/halfBitBottle.png" />
+	<p id="w3" style="position:absolute; left:100px; top:470px;font-family:verdana;font-size:14px;">Weight of empty Specific Gravity bottle + Bitumen(W<sub>3</sub>) = <span id="w3span">_____</span>g</p>
+</div>
+
+<div id="canvas6" class="simsubscreen" style="visibility:hidden;">
+<strong class="incanvas">STEP</strong>
+<span class="circlebg">&nbsp;6&nbsp;</span>
+<p class="steptext">&nbsp;The remaining space in the Specific Gravity bottle is filled with distilled water and stopper is placed.</p>
+	<img id="can6-6" style="position:absolute; left:300px; top:150px;cursor:pointer;width:60%;visibility:hidden" src="images/waterbath2.png" />
+	<img id="can6-5" style="position:absolute; left:200px; top:410px;cursor:pointer;" src="images/fillwater.png" />
+	<img id="can6-1" style="position:absolute; left:200px; top:250px;" src="images/bitFullBottle.png" />
+	<img id="can6-1a" style="position:absolute; left:200px; top:250px;visibility:hidden" src="images/bituminBottle.png" />
+	<img id="can6-1b" style="position:absolute;left:130px; top:174px;width:20%;visibility:hidden" src="images/bituminHand.png" />
+	<img id="can6-2" style="position:absolute; left:239px; top:232px;cursor:pointer" src="images/bottleCap.png" />
+	<img id="can6-2a" style="position:absolute; left:130px; top:174px;cursor:pointer;visibility:hidden" src="images/bottleCapHand.png" />
+	<img id="can6-2b" style="position:absolute; left:110px; top:254px;cursor:pointer;visibility:hidden" src="images/bottleCap.png" />
+	<img id="can6-3" style="position:absolute; left:300px; top:220px;cursor:pointer;visibility:hidden" src="images/mainbottle.png" />
+	<img id="can6-3a" style="position:absolute; left:240px; top:220px;cursor:pointer;visibility:hidden" src="images/bittilt.png" />
+	<img id="can6-3b" style="position:absolute; left:300px; top:220px;cursor:pointer;visibility:hidden" src="images/halfBottle.png" />
+</div>
+
+<div id="canvas7" class="simsubscreen" style="visibility:hidden;">
+<strong class="incanvas">STEP</strong>
+<span class="circlebg">&nbsp;7&nbsp;</span>
+<p class="steptext">&nbsp;The Specific Gravity bottle containing bitumen + distilled water is now weighed W<sub>4</sub>(g).</p>
+	<span class = "light" id="can7-5"></span>
+	<img id="can7-1" style="position:absolute; left:200px; top:280px;" src="images/wm1.png" />
+	<img id="can7-2" style="position:absolute; left:260px; top:400px;cursor:pointer" src="images/on.png" />
+	<img id="can7-3" style="position:absolute; left:365px; top:400px;cursor:pointer" src="images/tare.png" />
+	<img id="can7-4" style="position:absolute; left:75px; top:240px;cursor:pointer;" src="images/bitWater.png" />
+	<img id="can7-6" style="position:absolute; left:130px; top:174px;visibility:hidden" src="images/bitWaterHand.png" />
+	<p id="w4" style="position:absolute; left:100px; top:470px;font-family:verdana;font-size:14px;">Weight of Specific Gravity bottle+ Bitumen + Water(W<sub>4</sub>)= <span id="w4span">_____</span>g</p>
+</div>
+
+<div id="canvas8" class="simsubscreen" style="visibility:hidden;">
+<strong class="incanvas">STEP</strong>
+<span class="circlebg">&nbsp;8&nbsp;</span>
+<p class="steptext">&nbsp;Observation and Results.</p>
+	<p id="can8-0" style="position:absolute; left:150px; top:70px;font-family:verdana;font-size:14px;border:solid 2px;padding: 3px;"><strong>Specific gravity of Bitumen</strong> = <span id="can8-0span"><span class="frac"><sup>(W<sub>3</sub>-W<sub>1</sub>)</sup><span>&frasl;</span><sub>((W<sub>2</sub>-W<sub>4</sub>)-(W<sub>1</sub>-W<sub>3</sub>))</sup></sub></span></span></p>
+	<p id="can8-1" style="position:absolute; left:100px; top:150px;font-family:verdana;font-size:14px;">Weight of empty Specific Gravity bottle (W<sub>1</sub>) = <span id="can8-1span">_____ </span>&nbsp;g</p>
+	<p id="can8-2" style="position:absolute; left:100px; top:200px;font-family:verdana;font-size:14px;">Weight of empty Specific Gravity bottle + water (W<sub>2</sub>) = <span id="can8-2span">_____ </span>&nbsp;g</p>
+	<p id="can8-3" style="position:absolute; left:100px; top:250px;font-family:verdana;font-size:14px;">Weight of empty Specific Gravity bottle + Bitumen (W<sub>3</sub>) =<span id="can8-3span">_____ </span>&nbsp;g</p>
+	<p id="can8-4" style="position:absolute; left:100px; top:300px;font-family:verdana;font-size:14px;">Weight of empty Specific Gravity bottle + Bitumen + Water (W<sub>4</sub>)= <span id="can8-4span">_____ </span>&nbsp;g</p>
+	<p id="can8-5" style="position:absolute; left:100px; top:350px;font-family:verdana;font-size:14px;"><b>Specific gravity of Bitumen</b> = </p>
+	<h4 id="p8-1" style="position:absolute; left:-450px; top:380px;font-family:verdana;visibility:hidden">Since the Specific Gravity value of bitumen ranges from 0.97 to 1.02 according to BIS, This bitumen is suitable for pavement construction</h4>
+</div>
+
+
+<!-- nextButton -->
+<div id="nav">
+<img id="nextButton" onclick="navNext()" src="images/Next.png" />
+</div>
+<span id="dialog-div" style="text-align:justify;border-radius: 5px;">
+	<p id="divp" style="font-family:verdana; font-size:14px;padding: 5px">Both ends of the pipe must be trimmed to ensure parallel faces.</p>
+	 <input type="button" style="cursor:pointer;border-radius: 5px;margin: 0 auto; padding: 0;display: inline-block;text-align: center;" value="OK" onclick = "hideDialog();">
+</span>
+ 
+ 
+  
+  <!-- This is the questions division -->
+<span id="question-div">
+	 <p id="divq" style="font-family:verdana; font-size:14px;">Both ends of the pipe must be trimmed to ensure parallel faces</p>
+	 <!-- <input type="button" style="cursor:pointer" value="OK" onclick = "evaluateAnswer();"> -->
+	 <p id="ans"></p>
+</span>
+<!--Blinking Arrow	-->	
+<img class ="" id="arrow1" style="visibility:hidden;" src="images/arrow1.png"/>
+
+<div id="copyright"> &copy; 2018 - <script>document.write(new Date().getFullYear())</script> SOLVE - The Virtual Lab @ NITK Surathkal, Department of Water Resources & Ocean Engineering</div>
+
+</div>
+<script src="../assets/js/iframeResize.js"></script></body> 
+</html>

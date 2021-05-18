@@ -1,0 +1,370 @@
+html
+{
+    -moz-user-select     : none;
+    -khtml-user-select   : none;
+    -webkit-user-select  : none;
+    -o-user-select       : none;
+    user-select          : none;
+}
+#simscreen
+{
+	position: relative;
+	left:0px;
+	top:0px;
+	height: 600px; 
+	width:800px;
+	border:solid 1px;
+	background-color:white;
+}
+
+#title{
+	position:relative;
+	left: 0px;
+	top: 0px;
+	height:40px;
+	font-size: 24px;
+	text-align:center;
+	background-color: black;
+	font-family: verdana;
+	color: White;
+	text-transform: uppercase; 
+}
+
+#title h3
+{
+	padding-top:2px;
+	margin:0px;
+}	
+
+.simsubscreen
+{
+	position:absolute;
+	left:50px;
+	top:50px;
+	height:530px;
+	width:745px;
+}
+
+.incanvas
+{
+	margin:5px 0 0 5px;
+	padding:0;
+}
+
+#nextButton
+{
+	position:absolute;
+	left:750px;
+	top:530px;
+	cursor:pointer;
+}
+
+.circlebg
+{
+	border-radius:100%;
+	font-size:25px;
+	color:#fff;
+	text-align:center;
+	background:#000
+}
+
+.steptext
+{
+	display:inline;
+	font-size:14px;
+}
+
+#copyright{
+	position: absolute;
+	left:60px;
+	top: 580px;
+	font-size:12px
+}
+#can1-5,#can3-5,#can5-5,#can7-5{
+	position:absolute;
+	background-color:lightgrey;
+	width:96px;
+	height:19px;
+	left:286px; 
+	top:370px;
+	text-align:center;
+	font-family:verdana;
+	font-size:14px;
+	visibility:hidden;
+}
+.light{
+	position:absolute;
+	background-color:lightgrey;
+	width:96px;
+	height:19px;
+	left:286px; 
+	top:370px;
+	text-align:center;
+	font-family:verdana;
+	font-size:14px;
+}
+/* input[type=text]:focus  */
+/* { */
+	/* outline:none; */
+/* } */
+
+.wrong{
+	border-color:red;
+}
+.line2{
+	width: 50px;
+	text-decoration-line: underline;	
+	text-decoration-style: double;
+	border-bottom:none;
+	border-left:none;
+	border-top:none;
+	border-right:none;
+	font-family:verdana;
+	font-size:14px;
+	/* border:none; */
+}
+.inputStyle{
+	border:none;
+	border-bottom: 1px solid;
+	width:55px;
+	font-family:verdana;
+	font-size:14px;
+	text-align:center;
+}
+.resultStyle{
+	border:none;
+	border-bottom-style:double;
+	width:55px;
+	font-family:verdana;
+	font-size:14px;
+	text-align:center;
+	
+}
+#w1span,#w2span,#w3span,#w4span{
+	text-decoration-line: underline;	
+	text-decoration-style: double;
+}
+#dialog-div{
+	position: absolute;
+	left:400px;
+	top:100px;
+	width:300px;
+	border:solid 1px black;
+	background-color: black;
+	color:white;
+	visibility:hidden;
+}
+
+#dialog-div p{
+	position: relative;
+	text-indent:20px;
+}
+
+#dialog-div input{
+	position: relative;
+	/* left:200px; */
+	/* width:50px; */
+	padding-top:2px;
+	float : right;
+	width:15%;
+}
+#question-div{
+	position: absolute;
+	left:400px;
+	top:350px;
+	width:300px;
+	height:120px;
+	border:ridge 3px lightgrey;
+	background-color: lightgrey;
+	/* filter: alpha(opacity=55); */
+	color:black;
+	padding:10px;
+	visibility:hidden;
+}
+input[type="button"]{
+	cursor:pointer
+}
+.tooltip {
+	position: relative;
+	display: inline-block;
+	border-bottom: 1px dotted black;
+	font-family: verdana;
+	font-size:14px;
+}
+
+.tooltip .tooltiptext {
+	font-family: verdana;
+	font-size:14px;
+	visibility: hidden;
+	width: 500px;
+	background-color: black;
+	color: #fff;
+	border-radius: 6px;
+	padding: 10px 10px 10px 10px;
+	/* Position the tooltip */
+	position: absolute;
+	z-index: 100;
+	/* display:none; */
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+    /* display: inline-block; */
+
+}
+/* Animation keyframes */
+@-webkit-keyframes moveBottle
+{
+	0% {left:0px; top:180px;}
+	50% {left:0px; top:50px;}
+	100% {left:200px; top:50px;}
+}
+
+@keyframes moveBottle
+{
+	0% {left:0px; top:180px;}
+	50% {left:0px; top:50px;}
+	100% {left:200px; top:50px;}
+}
+
+@-webkit-keyframes moveBottleCap
+{
+	0% {left:130px; top:174px;}
+	50% {left:130px; top:104px;}
+	100% {left:0px; top:174px;}
+}
+
+@keyframes moveBottleCap
+{
+	0% {left:130px; top:174px;}
+	50% {left:130px; top:104px;}
+	100% {left:0px; top:174px;}
+}
+
+@-webkit-keyframes moveBottleCap2
+{
+	0% {left:0px; top:174px;}
+	50% {left:130px; top:104px;}
+	100% {left:130px; top:165px;}
+}
+
+@keyframes moveBottleCap2
+{
+	0% {left:0px; top:174px;}
+	50% {left:130px; top:104px;}
+	100% {left:130px; top:165px;}
+}
+
+@-webkit-keyframes distilMove
+{
+	0% {left:300px; top:220px;}
+	100% {left:300px; top:180px;}
+}
+
+@keyframes distilMove
+{
+	0% {left:300px; top:220px;}
+	100% {left:300px; top:180px;}
+}
+
+@-webkit-keyframes distilWaterMove
+{
+	0% {left:200px; top:418px;}
+	100% {left:200px; top:300px;}
+}
+
+@keyframes distilWaterMove
+{
+	0% {left:200px; top:418px;}
+	100% {left:200px; top:300px;}
+}
+@-webkit-keyframes distilWaterBack
+{
+	0% {left:240px; top:180px}
+	100% {left:300px; top:220px;}
+}
+
+@keyframes distilWaterBack
+{
+	0% {left:240px; top:180px}
+	100% {left:300px; top:220px}
+}
+
+@-webkit-keyframes bottleTank
+{
+	0% {left:130px; top:174px}
+	90% {left:370px; top:50px;width:20%}
+	100%{left:370px; top:65px;width:20%}
+}
+
+@keyframes bottleTank
+{
+	0% {left:130px; top:174px}
+	90% {left:370px; top:50px;width:20%}
+	100%{left:370px; top:65px;width:20%}
+}
+
+@keyframes bitMove
+{
+	0% {left:0px; top:250px;}
+	100% {left:100px; top:270px;}
+}
+@-webkit-keyframes bitMove
+{
+	0% {left:0px; top:250px;}
+	100% {left:100px; top:270px;}
+}
+
+@keyframes thermoMove
+{
+	0% {left:295px; top:80px;}
+	100% {left:295px; top:98px;}
+}
+@-webkit-keyframes thermoMove
+{
+	0% {left:295px; top:80px;}
+	100% {left:295px; top:98px;}
+}
+
+@keyframes thermoZoomMove
+{
+	0% {left:476.8px; top:180px;}
+	100% {left:476.8px; top:141px;}
+}
+@-webkit-keyframes thermoZoomMove
+{
+	0% {left:476.8px; top:180px;}
+	100% {left:476.8px; top:141px;}
+}
+@keyframes pourBitMove
+{
+	0% {left:300px; top:180px;}
+	100% {left:245px; top:180px;}
+}
+@-webkit-keyframes pourBitMove
+{
+	0% {left:300px; top:180px;}
+	100% {left:245px; top:180px;}
+}
+@-webkit-keyframes bitUpMove
+{
+	0% {left:200px; top:418px;}
+	100% {left:200px; top:360px;}
+}
+
+@keyframes bitUpMove
+{
+	0% {left:200px; top:418px;}
+	100% {left:200px; top:360px;}
+}
+@-webkit-keyframes slidePara
+{
+	from{left:-450px; top:380px;}
+	to{left:80px; top:380px;}
+}
+
+@keyframes slidePara
+{
+	from{left:-450px; top:380px;}
+	to{left:80px; top:380px;}
+}
