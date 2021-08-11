@@ -1,0 +1,51 @@
+[{
+		"question": "Temperature to be maintained in this experiment is?",
+		"answers": {
+			"a": "25&deg;C",
+			"b": "26&deg;C",
+			"c": "27&deg;C",
+			"d": "28&deg;C"
+		},
+		"correctAnswer": "c"
+	},
+	{
+		"question": "This test is conducted to determine Specific Gravity of?",
+		"answers": {
+			"a": "Semi-solid bitumen",
+			"b": "Solid bitumen",
+			"c": "Liquid bitumen",
+			"d": "Harden bitumen"
+		},
+		"correctAnswer": "a"
+	},
+
+	{
+		"question": "Capacity of Specific Gravity bottle used in this experiment is?",
+		"answers": {
+			"a": "10ml",
+			"b": "15ml",
+			"c": "25ml",
+			"d": "50ml"
+		},
+		"correctAnswer": "d"
+	},
+	{
+		"question": "IS code used for bitumen test is?",
+		"answers": {
+			"a": "IS 1401 to 1250 (1988)",
+			"b": "IS 1200 to 1220 (1979)",
+			"c": "IS 1201 to 1220 (1978)",
+			"d": "IS 1200 to 1230 (2000)"
+		},
+		"correctAnswer": "c"
+	},
+	{
+		"question": "Specific gravity of bitumen is important to understand the<br>1. Quality of bitumen<br>2. Rate of spread of bitumen<br>3. Consistency of bitumen",
+		"answers": {
+			"a": "Only 2 is correct",
+			"b": "Only 3 is correct",
+			"c": "1 and 2 are correct",
+			"d": "All are correct"
+		},
+		"correctAnswer": "c"
+}]
